@@ -24,7 +24,7 @@ For more information on prerequisites : [Hyperledger Fabric Prerequisites](https
 ### How to run **first-network**?
 ```sh
 $ cd fabric-samples/first-network
-$ ./byfn up
+$ ./byfn.sh up
 ```
 
 This generates all the required artifacts and brings up the simple network with 1 orderer, 4 peers of 2 different orgs with respective couchDBs and 1 cli container. Also, it runs end-to-end steps to verify whether network has all correct configurations. 
@@ -38,7 +38,7 @@ You can find more detailed information on 'first-network' here : https://hyperle
 
 ```sh
 $ cd fabric-samples/first-network
-$ ./byfn down
+$ ./byfn.sh down
 ```
 Run this command once you're done using 'first-network'.
 It removes all the containers and artifacts generated so that we can try other samples.
@@ -74,7 +74,7 @@ HLF network configs are mentioned in `fabric-samples/first-network/configtx.yaml
 Open a new terminal window and let's call it **terminal_1**
 ```sh
 $ cd fabric-samples/first-network
-$ ./byfn generate
+$ ./byfn.sh generate
 ```
 
 This command uses 'cryptogen' tool to generate necessary certificates for orderer (orderer.example.com), 2 orgs (org1.example.com and org2.example.com), genesis block config and channel config transaction.
